@@ -1,0 +1,32 @@
+.TodoApp {
+    background-color: #eee;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.75);
+  }
+  
+  .TodoItem {
+    display: flex;
+  }
+  
+  .TodoItem__remove {
+    cursor: pointer;
+    margin-left: 5px;
+    border: 1px gray solid;
+    border-radius: 3px;
+    padding: 0 3px;
+  }
+  
+  .TodoInput {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 5px;
+    outline: none;
+  }
+  
+  .TodoList {
+    margin-top: 20px;
+    user-select: none;
+  }

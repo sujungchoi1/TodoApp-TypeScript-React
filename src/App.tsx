@@ -18,7 +18,7 @@ function App() {
 
   const [todos, setTodos] = useState(initialTodos);
 
-  const toggleTodo = (selectedTodo: Todo) => {
+  const toggleTodo = (selectedTodo: Todo): void => {
     const newTodos = todos.map(todo => 
       todo === selectedTodo 
         ? { ...todo, complete: !todo.complete}
@@ -27,12 +27,12 @@ function App() {
     setTodos(newTodos);
   }
 
-  const addTodo: AddTodo = (text: string) => {
+  const addTodo = (text: string): void => {
     const newTodo = { text, complete: false };
     setTodos([...todos, newTodo]);
   }
 
-  const removeTodo = (selectedTodo: Todo) => {
+  const removeTodo = (selectedTodo: Todo): void => {
     setTodos(todos.filter((todo) => todo !== selectedTodo));
   }
 

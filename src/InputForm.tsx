@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 //     addTodo: AddTodo;
 // }
 
-
                     //  React.FC<Props> if not coming from .d.ts file
 export const InputForm: React.FC<InputForm> = ({ addTodo }) => {
     const [inputText, setInputText] = useState('');

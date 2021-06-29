@@ -26,10 +26,3 @@ interface TodoItem {
   toggleTodo: ToggleTodo;
   removeTodo: RemoveTodo;
 }
-
-
-type AddTodo = (text: string) => void;
-
-type ToggleTodo = (selectedTodo: Todo) => void;
-
-type RemoveTodo = (selectedTodo: Todo) => void;

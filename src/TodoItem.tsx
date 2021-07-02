@@ -14,7 +14,9 @@ import React from 'react';
 
 // declaring todoItem as functional component(Reac.FC) and passing props
 
+
 export const TodoItem: React.FC<TodoItem> = ({ todo, toggleTodo, removeTodo }) => {
+    
     return (
         <div className="TodoItem">
             <label
@@ -27,10 +29,18 @@ export const TodoItem: React.FC<TodoItem> = ({ todo, toggleTodo, removeTodo }) =
                     
                 /> {todo.text}
             </label>
+            <div className="Place_Clear">
+
+            <div className="TodoPlace">
+                {/* {todo.place} */}
+                {todo.place === 'home' ? '🏠 Home' : todo.place === 'work' ? '💼 Work':  !todo.place ? '' :  '📍 '+todo.place}
+                            
+            </div>
             <div 
                 className="TodoItem__remove" 
                 onClick={() => removeTodo(todo)}
-            > x</div>
+                > x</div>
+                </div>
         </div>
     )
 }

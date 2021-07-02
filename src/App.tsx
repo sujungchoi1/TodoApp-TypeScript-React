@@ -7,6 +7,7 @@ const initialTodos: Todo[] = [
   {
     text: 'feed the cat',
     complete: true,
+    place: 'home',
   },
   {
     text: 'walk the dog',
@@ -27,10 +28,20 @@ function App() {
     setTodos(newTodos);
   }
 
-  const addTodo = (text: string): void => {
-    const newTodo = { text, complete: false };
+  const completeAll = (selectedTodo: readonly Todo[]): void => {
+    const newTodos = todos.map(todo => ({
+        ...todo,
+        complete: true
+    }));
+    setTodos(newTodos);
+}
+
+  const addTodo = (text: string, place: Place): void => {
+    const newTodo = { text, complete: false, place };
     setTodos([...todos, newTodo]);
   }
+
+
 
   const removeTodo = (selectedTodo: Todo): void => {
     setTodos(todos.filter((todo) => todo !== selectedTodo));
@@ -38,7 +49,7 @@ function App() {
 
   return (
     <div className="TodoApp">
-      <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} completeAll={completeAll} />
       <InputForm addTodo={addTodo} />
     </div>
   );

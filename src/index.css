@@ -1,6 +1,6 @@
 .TodoApp {
     background-color: rgb(182, 232, 205);
-    width: 300px;
+    width: 500px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -8,6 +8,12 @@
   }
   
   .TodoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Place_Clear {
     display: flex;
   }
   
@@ -34,4 +40,17 @@
   .TodoList {
     margin-top: 20px;
     user-select: none;
+  }
+
+  .TodoPlace {
+    margin-left: 20px;
+  }
+
+  .completeAllBtn {
+    margin: 20px 0;
+  }
+
+  .formClass {
+    display: flex;
+    justify-content: space-between;
   }
